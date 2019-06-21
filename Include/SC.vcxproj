@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0B0BDA43-4E6C-4EFF-98E6-6019CA745293}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SC</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Bin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Bin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Bin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Bin</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ButtonComponent.h" />
+    <ClInclude Include="Collider.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Components\AdvancedBuild.h" />
+    <ClInclude Include="Components\Animator.h" />
+    <ClInclude Include="Components\Animator\BattlecruiserAnimator.h" />
+    <ClInclude Include="Components\Animator\DropshipAnimator.h" />
+    <ClInclude Include="Components\Animator\FirebatAnimator.h" />
+    <ClInclude Include="Components\Animator\GasBox.h" />
+    <ClInclude Include="Components\Animator\GasSac.h" />
+    <ClInclude Include="Components\Animator\GasTank.h" />
+    <ClInclude Include="Components\Animator\GhostAnimator.h" />
+    <ClInclude Include="Components\Animator\MarineAnimator.h" />
+    <ClInclude Include="Components\Animator\MineralOrb.h" />
+    <ClInclude Include="Components\Animator\ScienceVesselAnimator.h" />
+    <ClInclude Include="Components\Animator\SCVAnimator.h" />
+    <ClInclude Include="Components\Animator\VultureAnimator.h" />
+    <ClInclude Include="Components\Animator\WraithAnimator.h" />
+    <ClInclude Include="Components\Attack.h" />
+    <ClInclude Include="Components\Build.h" />
+    <ClInclude Include="Components\ButtonCollider.h" />
+    <ClInclude Include="Components\Camera.h" />
+    <ClInclude Include="Components\CameraMove.h" />
+    <ClInclude Include="Components\CircleCollider.h" />
+    <ClInclude Include="Components\ControlButton.h" />
+    <ClInclude Include="Components\CreateUnit.h" />
+    <ClInclude Include="Components\Cursor.h" />
+    <ClInclude Include="Components\DefaultUnitAnimator.h" />
+    <ClInclude Include="Components\Deffence.h" />
+    <ClInclude Include="Components\EditorButton.h" />
+    <ClInclude Include="Components\EditorManager.h" />
+    <ClInclude Include="Components\EllipseRenderer.h" />
+    <ClInclude Include="Components\ExitButton.h" />
+    <ClInclude Include="Components\FOW.h" />
+    <ClInclude Include="Components\Gather.h" />
+    <ClInclude Include="Components\GridRenderer.h" />
+    <ClInclude Include="Components\CollisionTile.h" />
+    <ClInclude Include="Components\Hold.h" />
+    <ClInclude Include="Components\InfoPanelButton.h" />
+    <ClInclude Include="Components\MinimapRenderer.h" />
+    <ClInclude Include="Components\Move.h" />
+    <ClInclude Include="Components\Patrol.h" />
+    <ClInclude Include="Components\PixelCollider.h" />
+    <ClInclude Include="Components\Player.h" />
+    <ClInclude Include="Components\PointCollider.h" />
+    <ClInclude Include="Components\ProgressBar.h" />
+    <ClInclude Include="Components\PsionicEnergy.h" />
+    <ClInclude Include="Components\RectangleRenderer.h" />
+    <ClInclude Include="Components\RectCollider.h" />
+    <ClInclude Include="Components\GameResource.h" />
+    <ClInclude Include="Components\Repair.h" />
+    <ClInclude Include="Components\Shield.h" />
+    <ClInclude Include="Components\SingleButton.h" />
+    <ClInclude Include="Components\Splash.h" />
+    <ClInclude Include="Components\SpriteRenderer.h" />
+    <ClInclude Include="Components\Stimpack.h" />
+    <ClInclude Include="Components\Stop.h" />
+    <ClInclude Include="Components\Structure.h" />
+    <ClInclude Include="Components\Structure\Academy.h" />
+    <ClInclude Include="Components\Structure\Armory.h" />
+    <ClInclude Include="Components\Structure\Barracks.h" />
+    <ClInclude Include="Components\Structure\Bunker.h" />
+    <ClInclude Include="Components\Structure\CommandCenter.h" />
+    <ClInclude Include="Components\Structure\EngineeringBay.h" />
+    <ClInclude Include="Components\Structure\Factory.h" />
+    <ClInclude Include="Components\Structure\Starport.h" />
+    <ClInclude Include="Components\SystemManager.h" />
+    <ClInclude Include="Components\TerrainRenderer.h" />
+    <ClInclude Include="Components\CursorMove.h" />
+    <ClInclude Include="Components\TestMove.h" />
+    <ClInclude Include="Components\TextRenderer.h" />
+    <ClInclude Include="Components\TextureRenderer.h" />
+    <ClInclude Include="Components\Transform.h" />
+    <ClInclude Include="Components\UIRenderer.h" />
+    <ClInclude Include="Components\Unit.h" />
+    <ClInclude Include="Components\UnitInfo.h" />
+    <ClInclude Include="Components\UnitStatus.h" />
+    <ClInclude Include="ConsoleButtonManager.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="FileStream.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="FogOfWarManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="InfoPanelManager.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="MinimapManager.h" />
+    <ClInclude Include="Option.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Scenes\DefaultScene.h" />
+    <ClInclude Include="Scenes\GameScene.h" />
+    <ClInclude Include="Scenes\MainGameScene.h" />
+    <ClInclude Include="Scenes\MainMenuScene.h" />
+    <ClInclude Include="Scenes\MapEditorScene.h" />
+    <ClInclude Include="Scenes\SplashScene.h" />
+    <ClInclude Include="Scenes\UnitEditScene.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="ConsoleButton.h" />
+    <ClInclude Include="Vector2.h" />
+    <ClInclude Include="VectorField.h" />
+    <ClInclude Include="VectorFieldManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ButtonComponent.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Components\AdvancedBuild.cpp" />
+    <ClCompile Include="Components\Animator.cpp" />
+    <ClCompile Include="Components\Animator\BattlecruiserAnimator.cpp" />
+    <ClCompile Include="Components\Animator\DropshipAnimator.cpp" />
+    <ClCompile Include="Components\Animator\FirebatAnimator.cpp" />
+    <ClCompile Include="Components\Animator\GasBox.cpp" />
+    <ClCompile Include="Components\Animator\GasSac.cpp" />
+    <ClCompile Include="Components\Animator\GasTank.cpp" />
+    <ClCompile Include="Components\Animator\GhostAnimator.cpp" />
+    <ClCompile Include="Components\Animator\MarineAnimator.cpp" />
+    <ClCompile Include="Components\Animator\MineralOrb.cpp" />
+    <ClCompile Include="Components\Animator\ScienceVesselAnimator.cpp" />
+    <ClCompile Include="Components\Animator\SCVAnimator.cpp" />
+    <ClCompile Include="Components\Animator\VultureAnimator.cpp" />
+    <ClCompile Include="Components\Animator\WraithAnimator.cpp" />
+    <ClCompile Include="Components\Attack.cpp" />
+    <ClCompile Include="Components\Build.cpp" />
+    <ClCompile Include="Components\ButtonCollider.cpp" />
+    <ClCompile Include="Components\Camera.cpp" />
+    <ClCompile Include="Components\CameraMove.cpp" />
+    <ClCompile Include="Components\CircleCollider.cpp" />
+    <ClCompile Include="Components\ControlButton.cpp" />
+    <ClCompile Include="Components\CreateUnit.cpp" />
+    <ClCompile Include="Components\Cursor.cpp" />
+    <ClCompile Include="Components\DefaultUnitAnimator.cpp" />
+    <ClCompile Include="Components\Deffence.cpp" />
+    <ClCompile Include="Components\EditorButton.cpp" />
+    <ClCompile Include="Components\EditorManager.cpp" />
+    <ClCompile Include="Components\EllipseRenderer.cpp" />
+    <ClCompile Include="Components\ExitButton.cpp" />
+    <ClCompile Include="Components\FOW.cpp" />
+    <ClCompile Include="Components\Gather.cpp" />
+    <ClCompile Include="Components\GridRenderer.cpp" />
+    <ClCompile Include="Components\CollisionTile.cpp" />
+    <ClCompile Include="Components\Hold.cpp" />
+    <ClCompile Include="Components\InfoPanelButton.cpp" />
+    <ClCompile Include="Components\MinimapRenderer.cpp" />
+    <ClCompile Include="Components\Move.cpp" />
+    <ClCompile Include="Components\Patrol.cpp" />
+    <ClCompile Include="Components\PixelCollider.cpp" />
+    <ClCompile Include="Components\Player.cpp" />
+    <ClCompile Include="Components\PointCollider.cpp" />
+    <ClCompile Include="Components\ProgressBar.cpp" />
+    <ClCompile Include="Components\PsionicEnergy.cpp" />
+    <ClCompile Include="Components\RectangleRenderer.cpp" />
+    <ClCompile Include="Components\RectCollider.cpp" />
+    <ClCompile Include="Components\GameResource.cpp" />
+    <ClCompile Include="Components\Repair.cpp" />
+    <ClCompile Include="Components\Shield.cpp" />
+    <ClCompile Include="Components\SingleButton.cpp" />
+    <ClCompile Include="Components\Splash.cpp" />
+    <ClCompile Include="Components\SpriteRenderer.cpp" />
+    <ClCompile Include="Components\Stimpack.cpp" />
+    <ClCompile Include="Components\Stop.cpp" />
+    <ClCompile Include="Components\Structure.cpp" />
+    <ClCompile Include="Components\Structure\Academy.cpp" />
+    <ClCompile Include="Components\Structure\Armory.cpp" />
+    <ClCompile Include="Components\Structure\Barracks.cpp" />
+    <ClCompile Include="Components\Structure\Bunker.cpp" />
+    <ClCompile Include="Components\Structure\CommandCenter.cpp" />
+    <ClCompile Include="Components\Structure\EngineeringBay.cpp" />
+    <ClCompile Include="Components\Structure\Factory.cpp" />
+    <ClCompile Include="Components\Structure\Starport.cpp" />
+    <ClCompile Include="Components\TerrainRenderer.cpp" />
+    <ClCompile Include="Components\CursorMove.cpp" />
+    <ClCompile Include="Components\TestMove.cpp" />
+    <ClCompile Include="Components\TextRenderer.cpp" />
+    <ClCompile Include="Components\TextureRenderer.cpp" />
+    <ClCompile Include="Components\Transform.cpp" />
+    <ClCompile Include="Components\SystemManager.cpp" />
+    <ClCompile Include="Components\UIRenderer.cpp" />
+    <ClCompile Include="Components\Unit.cpp" />
+    <ClCompile Include="Components\UnitInfo.cpp" />
+    <ClCompile Include="Components\UnitStatus.cpp" />
+    <ClCompile Include="ConsoleButtonManager.cpp" />
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="FileStream.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="FogOfWarManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="InfoPanelManager.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MinimapManager.cpp" />
+    <ClCompile Include="Option.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Scenes\DefaultScene.cpp" />
+    <ClCompile Include="Scenes\GameScene.cpp" />
+    <ClCompile Include="Scenes\MainGameScene.cpp" />
+    <ClCompile Include="Scenes\MainMenuScene.cpp" />
+    <ClCompile Include="Scenes\MapEditorScene.cpp" />
+    <ClCompile Include="Scenes\SplashScene.cpp" />
+    <ClCompile Include="Scenes\UnitEditScene.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="ConsoleButton.cpp" />
+    <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="VectorField.cpp" />
+    <ClCompile Include="VectorFieldManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+    <ResourceCompile Include="SC.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="SC.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
